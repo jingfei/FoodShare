@@ -20,6 +20,7 @@ import com.jingfei_and_her_happy_friends.foodshareapp.navgation.NavDrawerListAda
 import java.util.ArrayList;
 
 
+
 public class MainActivity extends ActionBarActivity {
     Boolean alreadyLogin = false;
 
@@ -147,22 +148,23 @@ public class MainActivity extends ActionBarActivity {
                 fragment = new FoodMap();
                 break;
             case 1:
-                //fragment = new MyHistory();
+                fragment = new FoodShare();
                 break;
             case 2:
-                //fragment = new HealthInfo();
+                fragment = new Comment();
                 break;
             case 3:
-                //fragment = new TakePhoto();
+                if(Global.status == 0) {
+                    fragment = new Login();
+                }
                 break;
             case 4:
-                //fragment = new Follower();
+                if(Global.status == 1) {
+                    fragment = new Logout();
+                }
                 break;
             case 5:
-                //fragment = new Version();
-                break;
-            case 6:
-                //fragment = new Help();
+                fragment = new Version();
                 break;
 
             default:

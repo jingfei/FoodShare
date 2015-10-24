@@ -38,7 +38,7 @@ public class Logout extends Fragment {
                         .commit();
             }
         });*/
-
+        Global.status=0;
         return rootView;
     }
 }
