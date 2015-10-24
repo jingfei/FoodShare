@@ -47,7 +47,7 @@ public class FoodMap extends Fragment {
         // 開啟執行JavaScript功能
         webView.getSettings().setJavaScriptEnabled(true);
         webView.setWebChromeClient(new WebChromeClient());
-        webView.loadUrl("http://10.10.164.72/food/map.php");
+        webView.loadUrl(Global.IP+"map.php");
 
         return rootView;
     }

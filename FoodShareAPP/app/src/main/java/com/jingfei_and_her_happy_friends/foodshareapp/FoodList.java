@@ -48,7 +48,7 @@ public class FoodList extends Fragment {
         // 開啟執行JavaScript功能
         webView.getSettings().setJavaScriptEnabled(true);
         webView.setWebChromeClient(new WebChromeClient());
-        webView.loadUrl("http://10.10.164.72/food/list.php");
+        webView.loadUrl(Global.IP+"list.php");
 
         return rootView;
     }

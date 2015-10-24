@@ -1,12 +1,15 @@
 package com.jingfei_and_her_happy_friends.foodshareapp;
 
 import android.app.Activity;
+import android.content.res.TypedArray;
 import android.net.Uri;
 import android.os.Bundle;
 import android.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import com.jingfei_and_her_happy_friends.foodshareapp.navgation.NavDrawerItem;
 
 
 /**
@@ -18,6 +21,8 @@ import android.view.ViewGroup;
  * create an instance of this fragment.
  */
 public class Logout extends Fragment {
+    private String[] navMenuTitles;
+    private TypedArray navMenuIcons;
     public Logout(){}
 
     @Override
@@ -38,7 +43,20 @@ public class Logout extends Fragment {
                         .commit();
             }
         });*/
+
+        FoodMap nextFrag= new FoodMap();
+        Logout.this.getFragmentManager().beginTransaction()
+                .replace(R.id.container, nextFrag)
+                .addToBackStack(null)
+                .commit();
+
         Global.status=0;
-        return rootView;
+        // load slide menu items
+        navMenuTitles = getResources().getStringArray(R.array.nav_drawer_items);
+        // nav drawer icons from resources
+        navMenuIcons = getResources().obtainTypedArray(R.array.nav_drawer_icons);
+        MainActivity.navDrawerItems.set(3, new NavDrawerItem(navMenuTitles[3], navMenuIcons.getResourceId(3, -1)));
+        // Recycle the typed array
+        navMenuIcons.recycle();return rootView;
     }
 }
