@@ -7,7 +7,7 @@
 		<script src="./js/masonry.pkgd.min.js"></script>
 		<link rel="stylesheet" href="./css/search.css" type="text/css"/>
 		<style>
-		.grid{ margin:10px 150px; }
+		.grid{ margin:10px 180px; }
 		.grid-item { 
 			width: 300px; 
 			border:1px solid gray; 
@@ -66,6 +66,12 @@ $(window).load(function(){
 					</ul>
 				</div>
 			</div>
+		</div>
+		<div style="position:fixed">
+			<img style="width:100px;position:fixed;left:70px;bottom:150px;" src="./img/bread.png" /><br/><br/>
+			<img style="width:100px;position:fixed;left:20px;bottom:50px;" src="./img/coffee.png" />
+			<img style="width:100px;position:fixed;right:70px;top:100px;" src="./img/pizza.png" />
+			<img style="width:100px;position:fixed;right:20px;top:200px;" src="./img/juice.png" />
 		</div>
 	<form class="search" method="post" action="index.html" style="padding:150px;height:10px">
 		<input type="text" name="q" placeholder="Search..." />

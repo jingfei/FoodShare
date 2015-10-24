@@ -34,6 +34,10 @@
 				</div>
 			</div>
 		</div>
+		<div style="position:fixed">
+			<img style="width:100px;position:fixed;left:20px;bottom:50px;" src="./img/rice.png" />
+			<img style="width:100px;position:fixed;right:20px;top:200px;" src="./img/fish.png" />
+		</div>
 		<form id="applyForm" class="ui large form error segment" method="post" action="./upload.php" enctype="multipart/form-data" style="background-color:rgba(255,255,255,0.8); width:80%; margin:50px auto">
 			<font color=red> * 必要填寫欄位</font><br>
 			<h4 class="ui dividing header"></h4>
