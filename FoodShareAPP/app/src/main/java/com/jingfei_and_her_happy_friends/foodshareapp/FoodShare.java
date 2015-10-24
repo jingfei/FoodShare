@@ -7,6 +7,8 @@ import android.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.webkit.WebChromeClient;
+import android.webkit.WebView;
 
 
 /**
@@ -23,7 +25,7 @@ public class FoodShare extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-
+        WebView webView;
         View rootView = inflater.inflate(R.layout.fragment_food_share, container, false);
 
        /* login_btn = (TextView)rootView.findViewById(R.id.login_btn);
@@ -38,7 +40,11 @@ public class FoodShare extends Fragment {
                         .commit();
             }
         });*/
-
+        webView = (WebView)rootView.findViewById(R.id.webView);
+        // 開啟執行JavaScript功能
+        webView.getSettings().setJavaScriptEnabled(true);
+        webView.setWebChromeClient(new WebChromeClient());
+        webView.loadUrl("http://10.10.164.72/food/post.php");
         return rootView;
     }
 }
