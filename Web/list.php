@@ -2,16 +2,17 @@
 <html>
 	<head>
 		<title>Feed Me</title>
+		<meta charset="UTF-8" />
 		<script src="./js/jquery-1.11.3.min.js"></script>
 		<script src="./js/masonry.pkgd.min.js"></script>
 		<link rel="stylesheet" href="./css/search.css" type="text/css"/>
 		<style>
-		.grid{ margin:10px; }
+		.grid{ margin:10px 150px; }
 		.grid-item { 
 			width: 300px; 
 			border:1px solid gray; 
 			border-radius:20px; 
-			margin-bottom:10px; 
+			margin-bottom:30px; 
 			background: #ccf8ff;
 		}
 		.grid-item img{
@@ -32,12 +33,12 @@ $(window).load(function(){
 	$('.grid').masonry({
 		columnWidth: 300,
 		itemSelector: '.grid-item',
-		gutter: 10
+		gutter: 40
 	});
 });
 		</script>
 	</head>
-	<body style="margin:0">
+	<body style="margin:0; background-image:url('./img/wood.jpg'); background-size:100% 100%;">
 	<form class="search" method="post" action="index.html" style="padding:150px;height:10px">
 		<input type="text" name="q" placeholder="Search..." />
 	</form>

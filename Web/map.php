@@ -2,6 +2,7 @@
 <html>
 	<head>
 		<title>Feed Me - map</title>
+		<meta charset="UTF-8" />
 		<style type="text/css">
 			html, body { height: 100%; margin: 0; padding: 0; }
 			#map { height: 100%; }
@@ -10,9 +11,9 @@
 var lat=24.786811000000004,lng=120.99716149999999;
 var locations=[
 <?php
-	foreach(/*id*/ as $v){
-		echo "[".$v['adress'].",".$v['content']."],";
-	}
+//	foreach(/*id*/ as $v){
+//		echo "[".$v['adress'].",".$v['content']."],";
+//	}
 ?>
 ];
 	
