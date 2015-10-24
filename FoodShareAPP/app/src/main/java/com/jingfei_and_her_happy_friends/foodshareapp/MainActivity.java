@@ -71,7 +71,8 @@ public class MainActivity extends ActionBarActivity {
         else
             navDrawerItems.add(new NavDrawerItem(navMenuTitles[5], navMenuIcons.getResourceId(5, -1), true, "50+"));
         navDrawerItems.add(new NavDrawerItem(navMenuTitles[6], navMenuIcons.getResourceId(2, -1)));
-
+        for(int i=0;i<navDrawerItems.size();i++)
+            Log.v("Title",navDrawerItems.get(i).getTitle());
 
         // Recycle the typed array
         navMenuIcons.recycle();
