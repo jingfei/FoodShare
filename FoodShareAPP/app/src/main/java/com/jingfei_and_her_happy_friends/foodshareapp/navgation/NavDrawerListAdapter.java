@@ -17,7 +17,6 @@ import java.util.ArrayList;
  * Created by mac on 15/10/24.
  */
 public class NavDrawerListAdapter extends BaseAdapter {
-
     private Context context;
     private ArrayList<NavDrawerItem> navDrawerItems;
 
@@ -49,13 +48,12 @@ public class NavDrawerListAdapter extends BaseAdapter {
             convertView = mInflater.inflate(R.layout.drawer_list_item, null);
         }
 
-        //ImageView imgIcon = (ImageView) convertView.findViewById(R.id.icon);
-        //TextView txtTitle = (TextView) convertView.findViewById(R.id.title);
+        ImageView imgIcon = (ImageView) convertView.findViewById(R.id.icon);
+        TextView txtTitle = (TextView) convertView.findViewById(R.id.title);
 
-        //imgIcon.setImageResource(navDrawerItems.get(position).getIcon());
-        //txtTitle.setText(navDrawerItems.get(position).getTitle());
+        imgIcon.setImageResource(navDrawerItems.get(position).getIcon());
+        txtTitle.setText(navDrawerItems.get(position).getTitle());
 
         return convertView;
     }
-
 }

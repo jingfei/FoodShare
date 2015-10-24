@@ -52,6 +52,7 @@ public class MainActivity extends ActionBarActivity {
 
         // nav drawer icons from resources
         navMenuIcons = getResources().obtainTypedArray(R.array.nav_drawer_icons);
+
         mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
         mDrawerList = (ListView) findViewById(R.id.list_slidermenu);
 
@@ -66,11 +67,10 @@ public class MainActivity extends ActionBarActivity {
         navDrawerItems.add(new NavDrawerItem(navMenuTitles[2], navMenuIcons.getResourceId(2, -1)));
         // Communities, Will add a counter here
         navDrawerItems.add(new NavDrawerItem(navMenuTitles[3], navMenuIcons.getResourceId(3, -1), true, "22"));
-        if(alreadyLogin)
-            navDrawerItems.add(new NavDrawerItem(navMenuTitles[4], navMenuIcons.getResourceId(4, -1)));
-        else
-            navDrawerItems.add(new NavDrawerItem(navMenuTitles[5], navMenuIcons.getResourceId(5, -1), true, "50+"));
-        navDrawerItems.add(new NavDrawerItem(navMenuTitles[6], navMenuIcons.getResourceId(2, -1)));
+        // Pages
+        navDrawerItems.add(new NavDrawerItem(navMenuTitles[4], navMenuIcons.getResourceId(4, -1)));
+        // What's hot, We  will add a counter here
+        navDrawerItems.add(new NavDrawerItem(navMenuTitles[5], navMenuIcons.getResourceId(5, -1), true, "50+"));
 
 
         // Recycle the typed array
@@ -79,7 +79,8 @@ public class MainActivity extends ActionBarActivity {
         mDrawerList.setOnItemClickListener(new SlideMenuClickListener());
 
         // setting the nav drawer list adapter
-        adapter = new NavDrawerListAdapter(getApplicationContext(), navDrawerItems);
+        adapter = new NavDrawerListAdapter(getApplicationContext(),
+                navDrawerItems);
         mDrawerList.setAdapter(adapter);
 
         // enabling action bar app icon and behaving it as toggle button
@@ -124,7 +125,6 @@ public class MainActivity extends ActionBarActivity {
         }
     }
 
-
     /***
      * Called when invalidateOptionsMenu() is triggered
      */
@@ -144,25 +144,25 @@ public class MainActivity extends ActionBarActivity {
         Fragment fragment = null;
         switch (position) {
             case 0:
-                fragment = new SearchFood();
-                break;
-            case 1:
-                fragment = new FoodMap();
-                break;
-            case 2:
                 fragment = new FoodList();
                 break;
+            case 1:
+                //fragment = new MyHistory();
+                break;
+            case 2:
+                //fragment = new HealthInfo();
+                break;
             case 3:
-                fragment = new FoodShare();
+                //fragment = new TakePhoto();
                 break;
             case 4:
-                if(alreadyLogin)
-                    fragment = new Logout();
-                else
-                    fragment = new Login();
+                //fragment = new Follower();
                 break;
             case 5:
-                fragment = new Version();
+                //fragment = new Version();
+                break;
+            case 6:
+                //fragment = new Help();
                 break;
 
             default:
@@ -171,8 +171,7 @@ public class MainActivity extends ActionBarActivity {
 
         if (fragment != null) {
             FragmentManager fragmentManager = getFragmentManager();
-            fragmentManager.beginTransaction()
-                    .replace(R.id.container, fragment).commit();
+            fragmentManager.beginTransaction().replace(R.id.container, fragment).commit();
 
             // update selected item and title, then close the drawer
             mDrawerList.setItemChecked(position, true);
