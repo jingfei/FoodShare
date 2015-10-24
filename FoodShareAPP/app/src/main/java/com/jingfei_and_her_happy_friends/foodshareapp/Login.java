@@ -1,6 +1,7 @@
 package com.jingfei_and_her_happy_friends.foodshareapp;
 
 import android.app.Activity;
+import android.content.res.TypedArray;
 import android.net.Uri;
 import android.os.Bundle;
 import android.app.Fragment;
@@ -8,6 +9,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+
+import com.jingfei_and_her_happy_friends.foodshareapp.navgation.NavDrawerItem;
 
 
 /**
@@ -20,6 +23,8 @@ import android.widget.TextView;
  */
 public class Login extends Fragment {
     TextView login_btn;
+    private String[] navMenuTitles;
+    private TypedArray navMenuIcons;
     public Login(){}
 
     @Override
@@ -33,7 +38,7 @@ public class Login extends Fragment {
             @Override
             public void onClick(View v) {
                 // TODO Auto-generated method stub
-                SearchFood nextFrag= new SearchFood();
+                FoodShare nextFrag= new FoodShare();
                 Login.this.getFragmentManager().beginTransaction()
                         .replace(R.id.container, nextFrag)
                         .addToBackStack(null)
@@ -41,6 +46,14 @@ public class Login extends Fragment {
             }
         });
         Global.status=1;
+        // load slide menu items
+        navMenuTitles = getResources().getStringArray(R.array.nav_drawer_items);
+        // nav drawer icons from resources
+        navMenuIcons = getResources().obtainTypedArray(R.array.nav_drawer_icons);
+        MainActivity.navDrawerItems.set(3, new NavDrawerItem(navMenuTitles[4], navMenuIcons.getResourceId(4, -1)));
+        // Recycle the typed array
+        navMenuIcons.recycle();
+
         return rootView;
     }
 

@@ -37,8 +37,7 @@ public class MainActivity extends ActionBarActivity {
     // slide menu items
     private String[] navMenuTitles;
     private TypedArray navMenuIcons;
-
-    private ArrayList<NavDrawerItem> navDrawerItems;
+    public static ArrayList<NavDrawerItem> navDrawerItems;
     private NavDrawerListAdapter adapter;
 
     @Override
@@ -53,26 +52,20 @@ public class MainActivity extends ActionBarActivity {
 
         // nav drawer icons from resources
         navMenuIcons = getResources().obtainTypedArray(R.array.nav_drawer_icons);
-
         mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
         mDrawerList = (ListView) findViewById(R.id.list_slidermenu);
 
         navDrawerItems = new ArrayList<NavDrawerItem>();
 
         // adding nav drawer items to array
-        // Home
         navDrawerItems.add(new NavDrawerItem(navMenuTitles[0], navMenuIcons.getResourceId(0, -1)));
-        // Find People
         navDrawerItems.add(new NavDrawerItem(navMenuTitles[1], navMenuIcons.getResourceId(1, -1)));
-        // Photos
         navDrawerItems.add(new NavDrawerItem(navMenuTitles[2], navMenuIcons.getResourceId(2, -1)));
-        // Communities, Will add a counter here
-        navDrawerItems.add(new NavDrawerItem(navMenuTitles[3], navMenuIcons.getResourceId(3, -1), true, "22"));
-        // Pages
-        navDrawerItems.add(new NavDrawerItem(navMenuTitles[4], navMenuIcons.getResourceId(4, -1)));
-        // What's hot, We  will add a counter here
+        if(Global.status==0)
+            navDrawerItems.add(new NavDrawerItem(navMenuTitles[3], navMenuIcons.getResourceId(3, -1), true, "22"));
+        else
+            navDrawerItems.add(new NavDrawerItem(navMenuTitles[4], navMenuIcons.getResourceId(4, -1)));
         navDrawerItems.add(new NavDrawerItem(navMenuTitles[5], navMenuIcons.getResourceId(5, -1), true, "50+"));
-
 
         // Recycle the typed array
         navMenuIcons.recycle();
@@ -82,6 +75,7 @@ public class MainActivity extends ActionBarActivity {
         // setting the nav drawer list adapter
         adapter = new NavDrawerListAdapter(getApplicationContext(),
                 navDrawerItems);
+        adapter.notifyDataSetChanged();
         mDrawerList.setAdapter(adapter);
 
         // enabling action bar app icon and behaving it as toggle button
@@ -154,16 +148,12 @@ public class MainActivity extends ActionBarActivity {
                 fragment = new Comment();
                 break;
             case 3:
-                if(Global.status == 0) {
+                if(Global.status == 0)
                     fragment = new Login();
-                }
+                else
+                    fragment = new Logout();
                 break;
             case 4:
-                if(Global.status == 1) {
-                    fragment = new Logout();
-                }
-                break;
-            case 5:
                 fragment = new Version();
                 break;
 

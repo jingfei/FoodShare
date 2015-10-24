@@ -5,5 +5,5 @@ package com.jingfei_and_her_happy_friends.foodshareapp;
  */
 public class Global {
     public static int status = 0;
-    public static String Ip = "";
+    public static String IP = "http://10.10.164.70/FoodShare/Web/";
 }

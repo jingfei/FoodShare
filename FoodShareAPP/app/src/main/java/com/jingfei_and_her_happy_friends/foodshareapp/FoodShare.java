@@ -44,7 +44,7 @@ public class FoodShare extends Fragment {
         // 開啟執行JavaScript功能
         webView.getSettings().setJavaScriptEnabled(true);
         webView.setWebChromeClient(new WebChromeClient());
-        webView.loadUrl("http://10.10.164.72/food/post.php");
+        webView.loadUrl(Global.IP+"post.php");
         return rootView;
     }
 }
