@@ -6,13 +6,13 @@
 
     <!-- Nav Drawer Menu Items -->
     <string-array name="nav_drawer_items">
-        <item >查看進度</item>
-        <item >我的歷程</item>
-        <item >健康資訊</item>
-        <item >拍張照片</item>
-        <item >私密人</item>
-        <item >版本設定</item>
-        <item >詢問台</item>
+        <item > 找美食 </item>
+        <item >美食地圖</item>
+        <item >美食清單</item>
+        <item >美食分享</item>
+        <item >　登入　</item>
+        <item >　登出　</item>
+        <item > 關於我 </item>
     </string-array>
 
     <!-- Nav Drawer List Item Icons -->
@@ -28,5 +28,9 @@
         <item>@drawable/ic_drawer</item>
         <item>@drawable/ic_drawer</item>
     </array>
+
+<!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_home_page">HomePage</string>
 
 </resources>
