@@ -4,7 +4,6 @@ package com.jingfei_and_her_happy_friends.foodshareapp.navgation;
  * Created by mac on 15/10/24.
  */
 public class NavDrawerItem {
-
     private String title;
     private int icon;
     private String count = "0";
