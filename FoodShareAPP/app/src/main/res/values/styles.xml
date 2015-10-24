@@ -10,12 +10,12 @@
     <!-- ActionBar styles -->
     <style name="MyActionBar" parent="@style/AppTheme">
         <item name="android:background">@drawable/action_bar_bg</item>
-        <item name="android:backgroundStacked">@color/app_bright_green</item>
-        <item name="android:backgroundSplit">@color/app_bright_green</item>
+        <item name="android:backgroundStacked">@color/app_gray_red</item>
+        <item name="android:backgroundSplit">@color/app_gray_red</item>
 
         <item name="background">@drawable/action_bar_bg</item>
-        <item name="backgroundStacked">@color/app_bright_green</item>
-        <item name="backgroundSplit">@color/app_bright_green</item>
+        <item name="backgroundStacked">@color/app_gray_red</item>
+        <item name="backgroundSplit">@color/app_gray_red</item>
     </style>
 
 </resources>

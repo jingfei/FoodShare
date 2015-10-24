@@ -9,9 +9,10 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.webkit.WebChromeClient;
 import android.webkit.WebView;
+import android.widget.TextView;
 
 
-/**
+/*
  * A simple {@link Fragment} subclass.
  * Activities that contain this fragment must implement the
  * {@link FoodList.OnFragmentInteractionListener} interface
@@ -29,18 +30,19 @@ public class FoodList extends Fragment {
 
         View rootView = inflater.inflate(R.layout.fragment_food_list, container, false);
 
-       /* login_btn = (TextView)rootView.findViewById(R.id.login_btn);
-        login_btn.setOnClickListener(new View.OnClickListener() {
+        TextView changeToMap;
+        changeToMap = (TextView)rootView.findViewById(R.id.changeToMap);
+        changeToMap.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 // TODO Auto-generated method stub
-                SearchFood nextFrag= new SearchFood();
-                Login.this.getFragmentManager().beginTransaction()
+                FoodMap nextFrag= new FoodMap();
+                FoodList.this.getFragmentManager().beginTransaction()
                         .replace(R.id.container, nextFrag)
                         .addToBackStack(null)
                         .commit();
             }
-        });*/
+        });
 
         webView = (WebView)rootView.findViewById(R.id.webView);
         // 開啟執行JavaScript功能

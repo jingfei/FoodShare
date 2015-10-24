@@ -34,7 +34,7 @@
 				</div>
 			</div>
 		</div>
-		<form id="applyForm" class="ui large form error segment" method="post" action="" style="background-color:rgba(255,255,255,0.8); width:80%; margin:50px auto">	
+		<form id="applyForm" class="ui large form error segment" method="post" action="./upload.php" enctype="multipart/form-data" style="background-color:rgba(255,255,255,0.8); width:80%; margin:50px auto">
 			<font color=red> * 必要填寫欄位</font><br>
 			<h4 class="ui dividing header"></h4>
 			<div class="two field">
@@ -78,7 +78,7 @@
 			</div>
 			<div class="required field">
 				<label for="expire_time">時間長度</label>
-				<input type="text" placeholder="時間長度" id="expire_time"  name="expire_time" class="required" maxlength="21" size="25" />
+				<input type="text" placeholder="時間長度" id="expire_time"  name="expTime" class="required" maxlength="21" size="25" />
 				<br>
 			</div>
 			<div class="require field">
