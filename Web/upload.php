@@ -4,7 +4,6 @@
     $ask_query = "SELECT pID FROM posts ORDER BY pID DESC LIMIT 1";
     $result = mysqli_query($link,$ask_query);
     $get = mysqli_fetch_assoc($result);
-
     $pID = $get["pID"] + 1;
     $uID = $_POST["uID"];
     $topic = $_POST["topic"];
@@ -12,12 +11,12 @@
     $eatPlace = $_POST["eatPlace"];
     $address = $_POST["address"];
     $price = $_POST["price"];
-    $expire_time = $_POST["expTime"];
+    $expire_time = $_POST["expire_time"];
     $quantity = $_POST["quantity"];
     $uploadFile = file_get_contents($_FILES["pic"]["tmp_name"]);
-
-    $add_sql = "INSERT INTO `FoodShare`.`posts` (`pID`, `uID`, `topic`, `eatPlace`, `address`, `price`, `expire_time`, `quantity`)
-                VALUES ({$pID}, {$uID}, {$topic}, {$eatPlace}, {$price}, {$address}, {$price}, {$expire_time}, {$quantity});"
+    $add_sql = "INSERT INTO `foodshare`.`posts` (`pID`, `topic`, `address`, `price`, `expire_time`, `quantity`)
+                VALUES ('{$pID}', '{$topic}', '{$address}', '{$price}', '{$expire_time}', '{$quantity}');";
+    echo $add_sql;
     mysqli_query($link, $add_sql);
 
     //mkdir for the post first
@@ -34,6 +33,7 @@
 
 
     //here to put content into txt
+    var_dump($uploadFile);
     $content_url = "https://hackathon.promise.com.tw/fileop/v1/files/Posts/{$pID}/content.txt";
     $options = array(
     	'http' => array(
