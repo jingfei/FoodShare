@@ -10,18 +10,23 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <WebView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:id="@+id/webView" />
-
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="0pt"
             android:textAppearance="?android:attr/textAppearanceSmall"
-            android:text="Small Text"
-            android:id="@+id/textView13"
-            android:layout_gravity="center_horizontal|top" />
+            android:text="@string/map_fragment"
+            android:id="@+id/changeToMap"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:textSize="36dp"
+            android:gravity="center_vertical|center_horizontal" />
+
+        <WebView
+            android:layout_width="match_parent"
+            android:layout_height="0pt"
+            android:id="@+id/webView"
+            android:layout_weight="10" />
+
     </LinearLayout>
 
 </FrameLayout>

@@ -4,7 +4,26 @@
     tools:context="com.jingfei_and_her_happy_friends.foodshareapp.FoodMap">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView android:layout_width="match_parent" android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView android:layout_width="match_parent" android:layout_height="0pt"
+            android:text="@string/list_fragment"
+            android:id="@+id/changeToList"
+            android:layout_weight="1"
+            android:textSize="36dp"
+            android:layout_gravity="center"
+            android:gravity="center_vertical|center_horizontal" />
+
+        <WebView
+            android:layout_width="match_parent"
+            android:layout_height="0pt"
+            android:id="@+id/webView"
+            android:layout_weight="10" />
+
+    </LinearLayout>
 
 </FrameLayout>
