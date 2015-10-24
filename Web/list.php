@@ -37,8 +37,36 @@ $(window).load(function(){
 	});
 });
 		</script>
+		<link rel="stylesheet" href="./css/home.css" type="text/css"/>
 	</head>
-	<body style="margin:0; background-image:url('./img/wood.jpg'); background-size:100% 100%;">
+	<body style="margin:0;font-family:Microsoft JhengHei; background-image:url('./img/wood.jpg'); background-size:100% 100%;">
+	    <div id="navigation" class="no-scroll">
+		    <div id="navigation-wrap">
+		   		<div id="nav">
+					<ul id="nav-ul">
+						<li>
+							<a id="buttonH" href="index.php">HOME</a>
+						</li>
+						<li></li>
+						<li>
+							<a id="buttonI" href="map.php">地圖尋找</a>
+						</li>
+						<li id="active">
+							<a id="buttonA" href="">列表尋找</a>
+						</li>
+						<li>
+							<a id="buttonL" href="post.php">分享美食</a>
+						</li>
+						<li>
+							<a id="buttonG" href="">我要評價</a>
+						</li>
+						<li>
+							<a id="buttonQ" href="">登入</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
 	<form class="search" method="post" action="index.html" style="padding:150px;height:10px">
 		<input type="text" name="q" placeholder="Search..." />
 	</form>
