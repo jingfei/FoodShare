@@ -8,6 +8,13 @@
 		</style>
 		<script>
 var lat=24.786811000000004,lng=120.99716149999999;
+var locations=[
+<?php
+	foreach(/*id*/ as $v){
+		echo "[".$v['adress'].",".$v['content']."],";
+	}
+?>
+];
 	
 function showPosition(position){
 	lat = position.coords.latitude;
@@ -30,10 +37,26 @@ function initMap() {
 	});
 
 	// Create a marker and set its position.
-	var marker = new google.maps.Marker({
+	var marker, i;
+	for(i=0; i<location.length; ++i){
+		marker = new google.maps.Marker({
 				map: map,
-				position: myLatLng,
-				title: 'Hello World!'
+				position: new google.maps.LatLng(locations[i][0],locations[i][1])
+		});
+		google.maps.event.addListener(marker, 'click', (function(marker,i){
+			return function(){
+				infowindow.setContent(locations[i][2]);
+				infowindow.open(map,marker);
+			}
+		})(marker,i));
+	}
+	/* your location */
+	var Loc = new Image(50,50);
+	Loc.src = "./img/dot.png";
+	marker = new google.maps.Marker({
+		map: map,
+		position: myLatLng,
+		icon: Loc
 	});
 }
 		</script>
