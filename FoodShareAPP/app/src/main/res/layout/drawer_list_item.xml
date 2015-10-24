@@ -8,8 +8,8 @@
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@color/app_yellow">
+        android:layout_height="35pt"
+        android:background="@color/app_menu_white">
 
         <ImageView
             android:id="@+id/icon"
@@ -25,7 +25,8 @@
             android:textAppearance="?android:attr/textAppearanceListItemSmall"
             android:gravity="center|center_vertical|center_horizontal"
             android:textSize="30dp"
-            android:text="try" />
+            android:text="try"
+            android:textColor="@color/app_font_black" />
     </LinearLayout>
 
     <!--android:contentDescription="@string/desc_list_item_icon" -->

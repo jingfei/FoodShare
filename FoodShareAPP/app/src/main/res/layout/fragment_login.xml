@@ -173,7 +173,7 @@
                 android:textStyle="bold"
                 android:textColor="@color/app_dark_gray"
                 android:gravity="center_vertical|center_horizontal"
-                android:background="@color/app_bright_green"
+                android:background="@color/app_gray_red"
                 android:textSize="30dp" />
 
             <TextView

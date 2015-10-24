@@ -32,7 +32,7 @@
 
         android:dividerHeight="1dp"
         android:listSelector="@drawable/list_selector"
-        android:divider="@color/list_yellow"
-        android:background="@color/app_yellow"/>
+        android:divider="@color/app_menu_white"
+        android:background="@color/app_menu_gray"/>
 
 </android.support.v4.widget.DrawerLayout>
