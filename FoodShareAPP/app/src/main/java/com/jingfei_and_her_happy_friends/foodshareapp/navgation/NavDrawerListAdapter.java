@@ -17,7 +17,6 @@ import java.util.ArrayList;
  * Created by mac on 15/10/24.
  */
 public class NavDrawerListAdapter extends BaseAdapter {
-
     private Context context;
     private ArrayList<NavDrawerItem> navDrawerItems;
 
@@ -57,5 +56,4 @@ public class NavDrawerListAdapter extends BaseAdapter {
 
         return convertView;
     }
-
 }
