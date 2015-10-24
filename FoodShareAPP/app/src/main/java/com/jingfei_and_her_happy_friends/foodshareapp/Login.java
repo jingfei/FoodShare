@@ -40,6 +40,7 @@ public class Login extends Fragment {
                         .commit();
             }
         });
+        Global.status=1;
         return rootView;
     }
 
