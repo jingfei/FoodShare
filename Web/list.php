@@ -23,7 +23,7 @@
 		}
 		</style>
 		<script>
-$(document).ready(function(){	
+$(document).ready(function(){
 });
 $(window).load(function(){
 	$("img").each(function(){
@@ -73,10 +73,25 @@ $(window).load(function(){
 			<img style="width:100px;position:fixed;right:70px;top:100px;" src="./img/pizza.png" />
 			<img style="width:100px;position:fixed;right:20px;top:200px;" src="./img/juice.png" />
 		</div>
-	<form class="search" method="post" action="index.html" style="padding:150px;height:10px">
+	<form class="search" method="post" action="list.php" style="padding:150px;height:10px">
 		<input type="text" name="q" placeholder="Search..." />
 	</form>
 		<div class="grid">
+			<?php
+				$keyword = $_POST["q"];
+				require_once "openDB.php";
+				$query = "SELECT pID, topic, content, address FROM posts";
+			    if ($keyword)
+			        $query .= " WHERE ";	//TODO:
+
+			    $result = mysqli_query($link, $query);
+
+			    for ($i=0; $i<mysqli_num_rows($result); $i++) {
+			        $row = mysqli_fetch_assoc($result);
+			        echo '<div class="grid-item"><img src="download_pic.php?pID=' . $row["pID"] . '" style="width:100%"/>';
+					echo '<p>' . $row["topic"] . '<br/>' . $row["content"] . '<br/>' . $row["address"] . '<br/></p></div>';
+			    }
+			?>
 			<div class="grid-item">
 				<img src="./img/food1.jpeg" style="width:100%"/>
 				<p>
@@ -128,3 +143,4 @@ $(window).load(function(){
 		</div>
 	</body>
 </html>
+
