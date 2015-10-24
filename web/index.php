@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>foodshare</title>
+		<title>Feed Me</title>
 	</head>
 	<body style="margin:0">
 		<img src="./img/main.png" style="width:100%"/>
