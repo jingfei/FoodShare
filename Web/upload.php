@@ -76,6 +76,10 @@
             $expire_time = $_POST["expire_time"];
             $quantity = $_POST["quantity"];
             $uploadFile = file_get_contents($_FILES["pic"]["tmp_name"]);
+            $add_sql = "INSERT INTO `foodshare`.`posts` (`pID`, `topic`, `time`, `content`, `eatPlace`, `address`, `price`, `expire_time`, `quantity`)
+                        VALUES ('{$pID}', '{$topic}', '{$time}', '{$content}', '{$eatPlace}', '{$address}', '{$price}', '{$expire_time}', '{$quantity}');";
+            //  echo $add_sql;
+            mysqli_query($link, $add_sql);
 
 
             //mkdir for the post first
@@ -137,10 +141,7 @@
             $go = json_decode($result,true);
             $lat = $go['results']['geometry']['location']['lat'];
             $lng = $go['results']['geometry']['location']['lng'];
-            $add_sql = "INSERT INTO `foodshare`.`posts` (`pID`, `topic`, `time`, `content`, `eatPlace`, `address`, `lat`, `lng`, `price`, `expire_time`, `quantity`)
-                        VALUES ('{$pID}', '{$topic}', '{$time}', '{$content}', '{$eatPlace}', '{$address}', '{$lat}', '{$lng}', '{$price}', '{$expire_time}', '{$quantity}');";
-            //  echo $add_sql;
-            mysqli_query($link, $add_sql);
+            
             echo '<h1 style="margin:50px;color:white;">已分享您的美食，請靜候佳音</h1>';
 			echo '<img src="./img/upload.png" style="width:90%"/>';
         ?>
