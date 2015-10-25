@@ -4,6 +4,7 @@
 		<title>Feed Me - map</title>
 		<meta charset="UTF-8" />
 		<link rel="stylesheet" href="./css/home.css" type="text/css"/>
+		<script src="./js/jquery-1.11.3.min.js"></script>
 		<script src="./js/main.js"></script>
 		<style type="text/css">
 			html, body { height: 100%; margin: 0; padding: 0; }
@@ -13,16 +14,19 @@
 var lat=24.786811000000004,lng=120.99716149999999;
 var locations=[
 <?php
-//	foreach(/*id*/ as $v){
-//		echo "[".$v['adress'].",".$v['content']."],";
-//	}
+    require_once "openDB.php";
+    $ask_query = "SELECT * FROM posts ORDER BY pID DESC LIMIT 1";
+    $result = mysqli_query($link,$ask_query);
+    $get = mysqli_fetch_assoc($result);
+	foreach($get as $v){
+		echo "[".$v['lng'].",".$v['lat'].",".$v['content']."],";
+	}
 ?>
 ];
 
 function showPosition(position){
 	lat = position.coords.latitude;
 	lng = position.coords.longitude;
-	console.log(lat+","+lng);
 }
 
 function initMap() {

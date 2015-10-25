@@ -14,7 +14,10 @@
 			border:1px solid gray;
 			border-radius:20px;
 			margin-bottom:30px;
-			background: #ccf8ff;
+			background: -webkit-linear-gradient(#C6B198, #F1F1F1); /* For Safari 5.1 to 6.0 */
+			background: -o-linear-gradient(#C6B198, #F1F1F1); /* For Opera 11.1 to 12.0 */
+			background: -moz-linear-gradient(#C6B198, #F1F1F1); /* For Firefox 3.6 to 15 */
+			background: linear-gradient(#C6B198, #F1F1F1); /* Standard syntax */
 		}
 		.grid-item img{
 			border-radius: 20px;
@@ -28,7 +31,7 @@ $(document).ready(function(){
 });
 $(window).load(function(){
 	$("img").each(function(){
-		var H = $(this).height() + 150;
+		var H = $(this).height() + 180;
 		$(this).parent().css({"height": H});
 	});
 	$('.grid').masonry({
@@ -112,49 +115,25 @@ $(window).load(function(){
 			<div class="grid-item">
 				<img src="./img/food1.jpeg" style="width:100%"/>
 				<p>
-					Food1<br/>
-					Good<br/>
-					address<br/>
+					<p><span style="font-weight:bold;font-size:1.2em;">蔬菜大全</span></p><br/>
+					<p>均衡飲食，不來可惜<br/><br/>
+					揚哲家<br/></p>
 				</p>
 			</div>
 			<div class="grid-item">
 				<img src="./img/food2.jpeg" style="width:100%"/>
 				<p>
-					Food1<br/>
-					Good<br/>
-					address<br/>
+					<p><span style="font-weight:bold;font-size:1.2em;">五穀根莖</span></p><br/>
+					<p>超營養，保證不會後悔<br/><br/>
+					微米家<br/></p>
 				</p>
 			</div>
 		    <div class="grid-item">
 				<img src="./img/food3.jpeg" style="width:100%"/>
 				<p>
-					Food1<br/>
-					Good<br/>
-					address<br/>
-				</p>
-			</div>
-			<div class="grid-item">
-				<img src="./img/food1.jpeg" style="width:100%"/>
-				<p>
-					Food1<br/>
-					Good<br/>
-					address<br/>
-				</p>
-			</div>
-			<div class="grid-item">
-				<img src="./img/food2.jpeg" style="width:100%"/>
-				<p>
-					Food1<br/>
-					Good<br/>
-					address<br/>
-				</p>
-			</div>
-		    <div class="grid-item">
-				<img src="./img/food3.jpeg" style="width:100%"/>
-				<p>
-					Food1<br/>
-					Good<br/>
-					address<br/>
+					<p><span style="font-weight:bold;font-size:1.2em;">垃圾食物</span></p><br/>
+					<p>看就知道多好吃，怎麼可能不值得<br/><br/>
+					哈哈家<br/></p>
 				</p>
 			</div>
 		</div>
