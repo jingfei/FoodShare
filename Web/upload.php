@@ -14,8 +14,8 @@
     $expire_time = $_POST["expire_time"];
     $quantity = $_POST["quantity"];
     $uploadFile = file_get_contents($_FILES["pic"]["tmp_name"]);
-    $add_sql = "INSERT INTO `foodshare`.`posts` (`pID`, `topic`, `address`, `price`, `expire_time`, `quantity`)
-                VALUES ('{$pID}', '{$topic}', '{$address}', '{$price}', '{$expire_time}', '{$quantity}');";
+    $add_sql = "INSERT INTO `foodshare`.`posts` (`pID`, `topic`, `content`, `eatPlace`, `address`, `price`, `expire_time`, `quantity`)
+                VALUES ('{$pID}', '{$topic}', '{$content}', '{$eatPlace}', '{$address}', '{$price}', '{$expire_time}', '{$quantity}');";
     echo $add_sql;
     mysqli_query($link, $add_sql);
 
