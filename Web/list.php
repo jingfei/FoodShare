@@ -58,7 +58,7 @@ $(window).load(function(){
 							<a id="buttonL" href="post.php">分享美食</a>
 						</li>
 						<li>
-							<a id="buttonG" href="">我要評價</a>
+							<a id="buttonG" href="comment.php">我要評價</a>
 						</li>
 						<li>
 							<a id="buttonQ" href="">登入</a>
