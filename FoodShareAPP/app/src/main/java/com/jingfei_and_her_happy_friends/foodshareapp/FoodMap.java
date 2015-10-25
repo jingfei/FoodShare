@@ -9,6 +9,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.webkit.WebChromeClient;
 import android.webkit.WebView;
+import android.widget.CompoundButton;
+import android.widget.Switch;
 import android.widget.TextView;
 
 
@@ -21,6 +23,7 @@ import android.widget.TextView;
  * create an instance of this fragment.
  */
 public class FoodMap extends Fragment {
+    Switch toList;
     public FoodMap(){}
 
     @Override
@@ -30,11 +33,12 @@ public class FoodMap extends Fragment {
         WebView webView;
         View rootView = inflater.inflate(R.layout.fragment_food_map, container, false);
 
-        TextView changeToList;
-        changeToList = (TextView)rootView.findViewById(R.id.changeToList);
-        changeToList.setOnClickListener(new View.OnClickListener() {
+        toList = (Switch) rootView.findViewById(R.id.switch1);
+        toList.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            //和checkbox監聽動作一樣setOncheckedChangListener
             @Override
-            public void onClick(View v) {
+            public void onCheckedChanged(CompoundButton buttonView,
+                                         boolean isChecked) {
                 // TODO Auto-generated method stub
                 FoodList nextFrag = new FoodList();
                 FoodMap.this.getFragmentManager().beginTransaction()
