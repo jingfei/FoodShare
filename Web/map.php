@@ -17,7 +17,7 @@ var locations=[
 //	}
 ?>
 ];
-	
+
 function showPosition(position){
 	lat = position.coords.latitude;
 	lng = position.coords.longitude;
@@ -25,12 +25,12 @@ function showPosition(position){
 }
 
 function initMap() {
-	if(navigator.geolocation) 
+	if(navigator.geolocation)
 		myLatLng = navigator.geolocation.getCurrentPosition(showPosition);
 	else
 		console.log("nope");
 	var myLatLng = {lat:lat,lng:lng};
-		
+
 	// Create a map object and specify the DOM element for display.
 	var map = new google.maps.Map(document.getElementById('map'), {
 				center: myLatLng,
@@ -82,10 +82,10 @@ function initMap() {
 							<a id="buttonL" href="post.php">分享美食</a>
 						</li>
 						<li>
-							<a id="buttonG" href="">我要評價</a>
+							<a id="buttonG" href="comment.php">我要評價</a>
 						</li>
 						<li>
-							<a id="buttonQ" href="">登入</a>
+							<a id="buttonQ" href="login.php">登入</a>
 						</li>
 					</ul>
 				</div>
@@ -95,4 +95,3 @@ function initMap() {
 <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBsDRrd6d0FIq1rbOp1_Meq4xqQNM61E1g&callback=initMap"></script>
 	</body>
 </html>
-
