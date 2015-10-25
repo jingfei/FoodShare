@@ -39,7 +39,7 @@
 							<a id="buttonG" href="">我要評價</a>
 						</li>
 						<li>
-							<a id="buttonQ" href="">登入</a>
+							<a id="buttonQ" href="login.php">登入</a>
 						</li>
 					</ul>
 				</div>
@@ -58,12 +58,12 @@
 					<option value="">請選擇</option>
 					<option value="breakfast">
 						黑客松早餐
-	 				</option>					
+	 				</option>
 					<option value="soda">
 						黑客松汽水
-					</option>	
+					</option>
 				</select>
-			</div>				
+			</div>
 			<div class="requried field">
 				<label for="star">評分</label>
 				<div  id="rate"></div>

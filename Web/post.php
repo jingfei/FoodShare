@@ -7,6 +7,9 @@
 		<link rel="stylesheet" href="./css/home.css" type="text/css"/>
 		<script src="./js/main.js"></script>
 	</head>
+	<?php
+		session_start();
+	?>
 	<body style="margin:0;font-family:Microsoft JhengHei; background-image:url('./img/wood.jpg'); background-size:100% 100%;">
 	    <div id="navigation" class="no-scroll">
 		    <div id="navigation-wrap">

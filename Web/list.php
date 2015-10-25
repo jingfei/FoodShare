@@ -62,7 +62,15 @@ $(window).load(function(){
 							<a id="buttonG" href="comment.php">我要評價</a>
 						</li>
 						<li>
-							<a id="buttonQ" href="login.php">登入</a>
+							<a id="buttonQ" href="login.php">
+								<?php
+									session_start();
+									if (isset($_SESSION["username"]))
+										echo "登出";
+									else
+										echo "登入";
+								?>
+							</a>
 						</li>
 					</ul>
 				</div>
@@ -85,6 +93,7 @@ $(window).load(function(){
 	</form>
 		<div class="grid">
 			<?php
+				session_start();
 				$keyword = $_POST["q"];
 				require_once "openDB.php";
 				$query = "SELECT pID, topic, content, address FROM posts";
@@ -97,7 +106,7 @@ $(window).load(function(){
 			    for ($i=0; $i<mysqli_num_rows($result); $i++) {
 			        $row = mysqli_fetch_assoc($result);
 			        echo '<div class="grid-item"><img src="download_pic.php?pID=' . $row["pID"] . '" style="width:100%"/>';
-					echo '<p>' . $row["topic"] . '<br/>' . $row["content"] . '<br/>' . $row["address"] . '<br/></p></div>';
+					echo '<p><span style="font-weight:bold;font-size:1.2em;">' . $row["topic"] . '</span><br/><p>' . $row["content"] . '<br/><br>' . $row["address"] . '<br/></p></p></div>';
 			    }
 			?>
 			<div class="grid-item">
