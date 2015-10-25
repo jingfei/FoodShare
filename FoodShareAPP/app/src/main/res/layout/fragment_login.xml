@@ -13,14 +13,15 @@
         android:paddingTop="@dimen/activity_vertical_margin"
         android:paddingBottom="@dimen/activity_vertical_margin"
         android:orientation="vertical"
-        android:background="@color/app_background">
+        android:background="@drawable/wood">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:id="@+id/textView"
             android:layout_gravity="center_horizontal"
-            android:layout_weight="10" />
+            android:layout_weight="10"
+            android:alpha="0" />
 
         <ImageView
             android:layout_width="match_parent"
@@ -87,7 +88,8 @@
             android:id="@+id/textview"
             android:layout_gravity="center_horizontal"
             android:layout_weight="10.7"
-            android:background="@color/app_background" />
+            android:background="@color/app_background"
+            android:alpha="0" />
 
         <LinearLayout
             android:orientation="horizontal"
@@ -141,7 +143,8 @@
             android:id="@+id/textView31"
             android:layout_gravity="center_horizontal"
             android:layout_weight="10.7"
-            android:background="@color/app_background" />
+            android:background="@color/app_background"
+            android:alpha="0" />
 
         <LinearLayout
             android:orientation="horizontal"
@@ -185,7 +188,8 @@
             android:text="註冊"
             android:id="@+id/tw"
             android:layout_weight="10"
-            android:gravity="center_vertical|center_horizontal" />
+            android:gravity="center_vertical|center_horizontal"
+            android:textColor="#FFE7E7E7" />
 
         <TextView
             android:layout_width="match_parent"
@@ -194,7 +198,8 @@
             android:text="忘記密碼"
             android:id="@+id/textView9"
             android:layout_weight="10"
-            android:gravity="center_vertical|center_horizontal" />
+            android:gravity="center_vertical|center_horizontal"
+            android:textColor="#ffe7e7e7" />
 
         <TextView
             android:layout_width="wrap_content"
