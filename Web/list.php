@@ -7,7 +7,7 @@
 		<script src="./js/masonry.pkgd.min.js"></script>
 		<link rel="stylesheet" href="./css/search.css" type="text/css"/>
 		<style>
-		.grid{ margin:10px 150px; }
+		.grid{ margin:10px 180px; }
 		.grid-item {
 			width: 300px;
 			border:1px solid gray;
@@ -27,7 +27,7 @@ $(document).ready(function(){
 });
 $(window).load(function(){
 	$("img").each(function(){
-		var H = $(this).height() + 100;
+		var H = $(this).height() + 150;
 		$(this).parent().css({"height": H});
 	});
 	$('.grid').masonry({
@@ -58,26 +58,39 @@ $(window).load(function(){
 							<a id="buttonL" href="post.php">分享美食</a>
 						</li>
 						<li>
-							<a id="buttonG" href="">我要評價</a>
+							<a id="buttonG" href="comment.php">我要評價</a>
 						</li>
 						<li>
-							<a id="buttonQ" href="">登入</a>
+							<a id="buttonQ" href="login.php">登入</a>
 						</li>
 					</ul>
 				</div>
 			</div>
 		</div>
+		<div style="position:fixed">
+			<img style="width:100px;position:fixed;left:70px;bottom:150px;" src="./img/bread.png" /><br/><br/>
+			<img style="width:100px;position:fixed;left:20px;bottom:50px;" src="./img/coffee.png" />
+			<img style="width:100px;position:fixed;right:70px;top:100px;" src="./img/pizza.png" />
+			<img style="width:100px;position:fixed;right:20px;top:200px;" src="./img/juice.png" />
+		</div>
 	<form class="search" method="post" action="list.php" style="padding:150px;height:10px">
-		<input type="text" name="q" placeholder="Search..." />
+		<input type="text" name="q" placeholder="Search..."
+			<?php
+				$keyword = $_POST["q"];
+				if ($keyword != "")
+					echo 'value="' . $keyword . '"';
+			?>
+		/>
 	</form>
 		<div class="grid">
 			<?php
 				$keyword = $_POST["q"];
 				require_once "openDB.php";
 				$query = "SELECT pID, topic, content, address FROM posts";
-			    if ($keyword)
-			        $query .= " WHERE ";	//TODO:
-
+			    if ($keyword) {
+			        $query .= " WHERE topic LIKE '%" . $keyword . "%' OR content LIKE '%" . $keyword .
+								"%' OR address LIKE '%" . $keyword . "%'";
+				}
 			    $result = mysqli_query($link, $query);
 
 			    for ($i=0; $i<mysqli_num_rows($result); $i++) {

@@ -19,12 +19,12 @@
 
 
     <array name="nav_drawer_icons">
-        <item>@drawable/ic_drawer</item>
-        <item>@drawable/ic_drawer</item>
-        <item>@drawable/ic_drawer</item>
-        <item>@drawable/ic_drawer</item>
-        <item>@drawable/ic_drawer</item>
-        <item>@drawable/ic_drawer</item>
+        <item>@drawable/menu_pic1</item>
+        <item>@drawable/menu_pic2</item>
+        <item>@drawable/menu_pic3</item>
+        <item>@drawable/menu_pic4</item>
+        <item>@drawable/menu_pic5</item>
+        <item>@drawable/menu_pic6</item>
     </array>
 
 <!-- TODO: Remove or change this placeholder text -->

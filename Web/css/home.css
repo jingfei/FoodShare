@@ -55,7 +55,7 @@
 	-ms-transition: all 100ms linear;
 	transition: all 100ms linear;
 }
-#nav ul li#active a, #nav ul li a:hover{ color: blue; }
+#nav ul li#active a, #nav ul li a:hover{ color: #48E6ED; }
 #fbicon{
 	position:absolute;
 	top:90px;
