@@ -42,8 +42,8 @@ function initMap() {
 		marker = new google.maps.Marker({
 				map: map,
 				position: new google.maps.LatLng(locations[i][0],locations[i][1])
-				console.log(locations[i][0]+","+locations[i][1]);
 		});
+				console.log(locations[i][0]+","+locations[i][1]);
 		google.maps.event.addListener(marker, 'click', (function(marker,i){
 			return function(){
 				infowindow.setContent(locations[i][2]);
