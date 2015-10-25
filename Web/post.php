@@ -55,11 +55,11 @@
 			</div>
 			<div class="required field">
 				<label for="descriptiion">敘述</label>
-				<input type="text" placeholder="敘述" id="content" name="content" class="required" size="25" maxlength="10" />
+				<input type="text" placeholder="敘述" id="content" name="content" class="required" size="25" maxlength="40" />
 				<br>
 			</div>
 			<div class="required field">
-				<label for="eatPlace">用餐地點</label>
+				<label for="eatPlace">用餐地點(若無則填"No")</label>
 				<input type="text" placeholder="用餐地點" id="eatPlace"  name="eatPlace" class="required" maxlength="21" size="25" />
 				<br>
 			</div>
@@ -75,13 +75,13 @@
 					<br>
 				</div>
 				<div class="required field">
-					<label for="quantity">人數</label>
+					<label for="quantity">份數</label>
 					<input type="text" placeholder="人數" id="quantity"  name="quantity" class="required" maxlength="21" size="25" />
 					<br>
 				</div>
 			</div>
 			<div class="required field">
-				<label for="expire_time">時間長度</label>
+				<label for="expire_time">賞味期限(格式：HH:MM:SS)</label>
 				<input type="text" placeholder="時間長度" id="expire_time"  name="expTime" class="required" maxlength="21" size="25" />
 				<br>
 			</div>
