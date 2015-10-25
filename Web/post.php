@@ -25,10 +25,10 @@
 							<a id="buttonL" href="">分享美食</a>
 						</li>
 						<li>
-							<a id="buttonG" href="">我要評價</a>
+							<a id="buttonG" href="comment.php">我要評價</a>
 						</li>
 						<li>
-							<a id="buttonQ" href="">登入</a>
+							<a id="buttonQ" href="login.php">登入</a>
 						</li>
 					</ul>
 				</div>
@@ -43,71 +43,71 @@
 			<h4 class="ui dividing header"></h4>
 			<div class="required field">
 				<label for="topic">美食名稱</label>
-				<input type="text" placeholder="美食名稱" id="topic" name="topic" class="required" size="25" maxlength="25" />
+				<input type="text" placeholder="美食名稱" required id="topic" name="topic" class="required" size="25" maxlength="25" />
 				<br>
 			</div>
 			<div class="five fields">
 				<div class="required field">
 					<label for="year">時間</label>
-					<input type="text" placeholder="西元年" id="year" name="year" class="required" maxlength="50" size="25" />
+					<input type="text" placeholder="西元年" required id="year" name="year" class="required" maxlength="50" size="25" />
 					<br>
 				</div>
 				<div class="field">
 					<label>&nbsp;</label>
-					<input type="text" placeholder="月" id="month" name="month" class="required" maxlength="50" size="25" />
+					<input type="text" placeholder="月" required  id="month" name="month" class="required" maxlength="50" size="25" />
 					<br>
 				</div>
 				<div class="field">
 					<label>&nbsp;</label>
-					<input type="text" placeholder="日" id="day" name="day" class="required" maxlength="50" size="25" />
+					<input type="text" placeholder="日" required  id="day" name="day" class="required" maxlength="50" size="25" />
 					<br>
 				</div>
 				<div class="field">
 					<label>&nbsp;</label>
-					<input type="text" placeholder="時 (24小時制)" id="hour" name="hour" class="required" maxlength="50" size="25" />
+					<input type="text" placeholder="時 (24小時制)" required  id="hour" name="hour" class="required" maxlength="50" size="25" />
 					<br>
 				</div>
 				<div class="field">
 					<label>&nbsp;</label>
-					<input type="text" placeholder="分" id="minute" name="minute" class="required" maxlength="50" size="25" />
+					<input type="text" placeholder="分" required  id="minute" name="minute" class="required" maxlength="50" size="25" />
 					<br>
 				</div>
 			</div>
 			<div class="required field">
 				<label for="descriptiion">敘述</label>
-				<input type="text" placeholder="敘述" id="content" name="content" class="required" size="25" maxlength="40" />
+				<input type="text" placeholder="敘述" required  id="content" name="content" class="required" size="25" maxlength="40" />
 				<br>
 			</div>
 			<div class="required field">
 				<label for="eatPlace">用餐地點</label>
-				<input type="text" placeholder='(若無則填"No")' id="eatPlace"  name="eatPlace" class="required" maxlength="21" size="25" />
+				<input type="text" placeholder='(若無則填"No")' required  id="eatPlace"  name="eatPlace" class="required" maxlength="21" size="25" />
 				<br>
 			</div>
 			<div class="required field">
 				<label for="address">地址</label>
-				<input type="text" placeholder="地址" id="address"  name="address" class="required" maxlength="21" size="25" />
+				<input type="text" placeholder="地址" id="address" required   name="address" class="required" maxlength="21" size="25" />
 				<br>
 			</div>
 			<div class="required two fields">
 				<div class="required field">
 					<label for="price">價錢</label>
-					<input type="text" placeholder="價錢" id="price"  name="price" class="required" maxlength="21" size="25" />
+					<input type="text" placeholder="價錢" required  id="price"  name="price" class="required" maxlength="21" size="25" />
 					<br>
 				</div>
 				<div class="required field">
 					<label for="quantity">份數</label>
-					<input type="text" placeholder="人數" id="quantity"  name="quantity" class="required" maxlength="21" size="25" />
+					<input type="text" placeholder="人數" required  id="quantity"  name="quantity" class="required" maxlength="21" size="25" />
 					<br>
 				</div>
 			</div>
 			<div class="required field">
 				<label for="expire_time">賞味期限</label>
-				<input type="text" placeholder="時間長度 (格式：HH:MM:SS)" id="expire_time"  name="expTime" class="required" maxlength="21" size="25" />
+				<input type="text" placeholder="時間長度 (格式：HH:MM:SS)" required  id="expire_time"  name="expTime" class="required" maxlength="21" size="25" />
 				<br>
 			</div>
 			<div class="require field">
 				<label for"pic">圖片上傳</label>
-				<input type="file" placeholder="圖片上傳" id="pic" name="pic" class="required" maxlength="21" size="25" />
+				<input type="file" placeholder="圖片上傳" required  id="pic" name="pic" class="required" maxlength="21" size="25" />
 				<br>
 			</div>
 			<div class="field">
