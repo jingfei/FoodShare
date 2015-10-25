@@ -75,10 +75,7 @@
             $expire_time = $_POST["expire_time"];
             $quantity = $_POST["quantity"];
             $uploadFile = file_get_contents($_FILES["pic"]["tmp_name"]);
-            $add_sql = "INSERT INTO `foodshare`.`posts` (`pID`, `topic`, `time`, `content`, `eatPlace`, `address`, `price`, `expire_time`, `quantity`)
-                        VALUES ('{$pID}', '{$topic}', '{$time}', '{$content}', '{$eatPlace}', '{$address}', '{$price}', '{$expire_time}', '{$quantity}');";
-            //  echo $add_sql;
-            mysqli_query($link, $add_sql);
+
 
             //mkdir for the post first
             $mkdir_url = "https://hackathon.promise.com.tw/fileop/v1/fileops/Posts/{$pID}";
@@ -123,6 +120,26 @@
         	);
         	$pic_context  = stream_context_create($options);
         	$result = file_get_contents($pic_url, false, $pic_context);
+
+            $geo_url = "https://maps.googleapis.com/maps/api/geocode/json";
+            $options = array(
+                'http' => array(
+                    'header'  => "address: {$address}\r\n" .
+                                 "components:contry:TW\r\n" .
+                                 "key: AIzaSyBsDRrd6d0FIq1rbOp1_Meq4xqQNM61E1g\r\n",
+                    'method'  => 'GET'
+                )
+            );
+            $geo_context  = stream_context_create($options);
+            $result = file_get_contents($geo_url, false, $geo_context);
+            var_dump($result);
+            $go = json_decode($result,true);
+            $lat = $go['results']['geometry']['location']['lat'];
+            $lng = $go['results']['geometry']['location']['lng'];
+            $add_sql = "INSERT INTO `foodshare`.`posts` (`pID`, `topic`, `time`, `content`, `eatPlace`, `address`, `lat`, `lng`, `price`, `expire_time`, `quantity`)
+                        VALUES ('{$pID}', '{$topic}', '{$time}', '{$content}', '{$eatPlace}', '{$address}', '{$lat}', '{$lng}', '{$price}', '{$expire_time}', '{$quantity}');";
+            //  echo $add_sql;
+            mysqli_query($link, $add_sql);
             echo '<h1 style="margin:50px;color:white;">已分享您的美食，請靜候佳音</h1>';
         ?>
 	</body>

@@ -23,6 +23,9 @@ $(document).ready(function(){
 });
 		</script>
 	</head>
+	<?php
+		session_start();
+	?>
 	<body style="margin:0;font-family:Microsoft JhengHei;overflow-x:hidden ">
 	    <div id="navigation" class="no-scroll">
 			<span id="fbicon"><a href="https://www.facebook.com/MSPTaiwan" target="_blank"><img src="img/fbicon.png" style="width:100%" /></a></span>
