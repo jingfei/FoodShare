@@ -14,16 +14,19 @@
 var lat=24.786811000000004,lng=120.99716149999999;
 var locations=[
 <?php
-//	foreach(/*id*/ as $v){
-//		echo "[".$v['lng'].",".$v['lat'].",".$v['content']."],";
-//	}
+    require_once "openDB.php";
+    $ask_query = "SELECT * FROM posts ORDER BY pID DESC LIMIT 1";
+    $result = mysqli_query($link,$ask_query);
+    $get = mysqli_fetch_assoc($result);
+	foreach($get as $v){
+		echo "[".$v['lng'].",".$v['lat'].",".$v['content']."],";
+	}
 ?>
 ];
 
 function showPosition(position){
 	lat = position.coords.latitude;
 	lng = position.coords.longitude;
-	console.log(lat+","+lng);
 }
 
 function initMap() {
