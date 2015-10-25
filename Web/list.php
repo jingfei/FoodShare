@@ -115,25 +115,25 @@ $(window).load(function(){
 			<div class="grid-item">
 				<img src="./img/food1.jpeg" style="width:100%"/>
 				<p>
-					Food1<br/>
-					Good<br/>
-					address<br/>
+					蔬菜大全<br/>
+					均衡飲食，不來可惜<br/>
+					揚哲家<br/>
 				</p>
 			</div>
 			<div class="grid-item">
 				<img src="./img/food2.jpeg" style="width:100%"/>
 				<p>
-					Food1<br/>
-					Good<br/>
-					address<br/>
+					五穀根莖<br/>
+					超營養，保證不會後悔<br/>
+					微米家<br/>
 				</p>
 			</div>
 		    <div class="grid-item">
 				<img src="./img/food3.jpeg" style="width:100%"/>
 				<p>
-					Food1<br/>
-					Good<br/>
-					address<br/>
+					垃圾食物<br/>
+					看就知道多好吃，怎麼可能不值得<br/>
+					哈哈家<br/>
 				</p>
 			</div>
 		</div>
