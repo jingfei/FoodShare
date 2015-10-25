@@ -38,16 +38,16 @@
 							<a id="buttonI" href="map.php">地圖尋找</a>
 						</li>
 						<li>
-							<a id="buttonA" href="">列表尋找</a>
+							<a id="buttonA" href="list.php">列表尋找</a>
 						</li>
 						<li>
 							<a id="buttonL" href="post.php">分享美食</a>
 						</li>
 						<li>
-							<a id="buttonG" href="">我要評價</a>
+							<a id="buttonG" href="comment.php">我要評價</a>
 						</li>
 						<li>
-							<a id="buttonQ" href="">登入</a>
+							<a id="buttonQ" href="login.php">登入</a>
 						</li>
 					</ul>
 				</div>
