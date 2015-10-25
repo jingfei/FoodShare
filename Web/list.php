@@ -27,7 +27,7 @@ $(document).ready(function(){
 });
 $(window).load(function(){
 	$("img").each(function(){
-		var H = $(this).height() + 100;
+		var H = $(this).height() + 150;
 		$(this).parent().css({"height": H});
 	});
 	$('.grid').masonry({
