@@ -30,7 +30,6 @@ function Go(){
 	<body style="margin:0;font-family:Microsoft JhengHei;overflow-x:hidden ">
 	    <div id="navigation" class="no-scroll">
 			<span id="fbicon"><a href="https://www.facebook.com/MSPTaiwan" target="_blank"><img src="img/fbicon.png" style="width:100%" /></a></span>
-			<a id="buttonCircle" href=""><img src="img/circle.png" style="position:fixed;bottom:20px;right:20px;z-index:20;width:30px;" /></a>
 		    <div id="navigation-wrap">
 		   		<div id="nav">
 					<ul id="nav-ul">
