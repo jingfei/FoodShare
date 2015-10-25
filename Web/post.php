@@ -5,6 +5,7 @@
 		<meta charset="UTF-8" />
 		<link rel="stylesheet" type="text/css" class="ui" href="./css/semantic.min.css">
 		<link rel="stylesheet" href="./css/home.css" type="text/css"/>
+		<script src="./js/jquery-1.11.3.min.js"></script>
 		<script src="./js/main.js"></script>
 	</head>
 	<?php
