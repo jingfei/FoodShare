@@ -47,7 +47,7 @@ $(document).ready(function(){
 							<a id="buttonG" href="comment.php">我要評價</a>
 						</li>
 						<li>
-							<a id="buttonQ" href="">登入</a>
+							<a id="buttonQ" href="login.php">登入</a>
 						</li>
 					</ul>
 				</div>
