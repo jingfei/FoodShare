@@ -74,7 +74,13 @@ $(window).load(function(){
 			<img style="width:100px;position:fixed;right:20px;top:200px;" src="./img/juice.png" />
 		</div>
 	<form class="search" method="post" action="list.php" style="padding:150px;height:10px">
-		<input type="text" name="q" placeholder="Search..." />
+		<input type="text" name="q" placeholder="Search..."
+			<?php
+				$keyword = $_POST["q"];
+				if ($keyword != "")
+					echo 'value="' . $keyword . '"';
+			?>
+		/>
 	</form>
 		<div class="grid">
 			<?php
@@ -84,7 +90,6 @@ $(window).load(function(){
 			    if ($keyword) {
 			        $query .= " WHERE topic LIKE '%" . $keyword . "%' OR content LIKE '%" . $keyword .
 								"%' OR address LIKE '%" . $keyword . "%'";
-					echo $query;
 				}
 			    $result = mysqli_query($link, $query);
 
