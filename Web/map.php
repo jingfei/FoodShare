@@ -13,15 +13,6 @@
 		<script>
 var lat=24.786811000000004,lng=120.99716149999999;
 var locations=[
-<?php
-    require_once "openDB.php";
-    $ask_query = "SELECT * FROM posts";
-    $result = mysqli_query($link,$ask_query);
-	for ($i=0; $i<mysqli_num_rows($result); $i++) {
-    	$get = mysqli_fetch_assoc($result);
-		echo "[".$get['lng'].",".$get['lat'].",'".$get['content']."'],";
-	}
-?>
 ];
 
 function showPosition(position){
