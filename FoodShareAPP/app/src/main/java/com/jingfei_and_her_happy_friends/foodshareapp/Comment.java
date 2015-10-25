@@ -7,6 +7,8 @@ import android.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.webkit.WebChromeClient;
+import android.webkit.WebView;
 
 
 /**
@@ -18,12 +20,15 @@ import android.view.ViewGroup;
  * create an instance of this fragment.
  */
 public class Comment extends Fragment {
-    /*
-    WebView webView;
+    public Comment(){}
 
-        View rootView = inflater.inflate(R.layout.fragment_food_list, container, false);
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+        WebView webView;
 
-        TextView changeToMap;
+        View rootView = inflater.inflate(R.layout.fragment_comment, container, false);
+
+    /*    TextView changeToMap;
         changeToMap = (TextView)rootView.findViewById(R.id.changeToMap);
         changeToMap.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -35,14 +40,14 @@ public class Comment extends Fragment {
                         .addToBackStack(null)
                         .commit();
             }
-        });
+        });*/
 
         webView = (WebView)rootView.findViewById(R.id.webView);
         // 開啟執行JavaScript功能
         webView.getSettings().setJavaScriptEnabled(true);
         webView.setWebChromeClient(new WebChromeClient());
-        webView.loadUrl("http://10.10.164.72/food/list.php");
+        webView.loadUrl(Global.IP+"comment.php");
 
         return rootView;
-    } */
+    }
 }
