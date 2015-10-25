@@ -41,15 +41,35 @@
 		<form id="applyForm" class="ui large form error segment" method="post" action="./upload.php" enctype="multipart/form-data" style="background-color:rgba(255,255,255,0.8); width:80%; margin:50px auto">
 			<font color=red> * 必要填寫欄位</font><br>
 			<h4 class="ui dividing header"></h4>
-			<div class="two field">
+			<div class="required field">
+				<label for="topic">美食名稱</label>
+				<input type="text" placeholder="美食名稱" id="topic" name="topic" class="required" size="25" maxlength="25" />
+				<br>
+			</div>
+			<div class="five fields">
 				<div class="required field">
-					<label for="topic">美食名稱</label>
-					<input type="text" placeholder="美食名稱" id="topic" name="topic" class="required" size="25" maxlength="25" />
+					<label for="year">時間</label>
+					<input type="text" placeholder="西元年" id="year" name="year" class="required" maxlength="50" size="25" />
 					<br>
 				</div>
-				<div class="required field">
-					<label for="time">時間</label>
-					<input type="text" placeholder="時間" id="time" name="time" class="required" maxlength="50" size="25" />
+				<div class="field">
+					<label>&nbsp;</label>
+					<input type="text" placeholder="月" id="month" name="month" class="required" maxlength="50" size="25" />
+					<br>
+				</div>
+				<div class="field">
+					<label>&nbsp;</label>
+					<input type="text" placeholder="日" id="day" name="day" class="required" maxlength="50" size="25" />
+					<br>
+				</div>
+				<div class="field">
+					<label>&nbsp;</label>
+					<input type="text" placeholder="時 (24小時制)" id="hour" name="hour" class="required" maxlength="50" size="25" />
+					<br>
+				</div>
+				<div class="field">
+					<label>&nbsp;</label>
+					<input type="text" placeholder="分" id="minute" name="minute" class="required" maxlength="50" size="25" />
 					<br>
 				</div>
 			</div>
@@ -59,8 +79,8 @@
 				<br>
 			</div>
 			<div class="required field">
-				<label for="eatPlace">用餐地點(若無則填"No")</label>
-				<input type="text" placeholder="用餐地點" id="eatPlace"  name="eatPlace" class="required" maxlength="21" size="25" />
+				<label for="eatPlace">用餐地點</label>
+				<input type="text" placeholder='(若無則填"No")' id="eatPlace"  name="eatPlace" class="required" maxlength="21" size="25" />
 				<br>
 			</div>
 			<div class="required field">
@@ -81,8 +101,8 @@
 				</div>
 			</div>
 			<div class="required field">
-				<label for="expire_time">賞味期限(格式：HH:MM:SS)</label>
-				<input type="text" placeholder="時間長度" id="expire_time"  name="expTime" class="required" maxlength="21" size="25" />
+				<label for="expire_time">賞味期限</label>
+				<input type="text" placeholder="時間長度 (格式：HH:MM:SS)" id="expire_time"  name="expTime" class="required" maxlength="21" size="25" />
 				<br>
 			</div>
 			<div class="require field">
