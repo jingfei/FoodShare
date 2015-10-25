@@ -8,6 +8,7 @@
 		<link rel="stylesheet" href="./rate/jquery.raty.css" type="text/css"/>
 		<script src="./js/jquery-1.11.3.min.js"></script>
 		<script src="./js/semantic.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="./js/main.js"></script>
 		<script src="./rate/jquery.raty.js" type="text/javascript" charset="utf-8"></script>
 		<script>
 		$(document).ready( function(){

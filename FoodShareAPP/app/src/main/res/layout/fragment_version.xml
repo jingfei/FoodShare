@@ -1,10 +1,52 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.jingfei_and_her_happy_friends.foodshareapp.Version">
+    tools:context="com.jingfei_and_her_happy_friends.foodshareapp.Version"
+    android:background="@drawable/wood"
+    android:alpha="1">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView android:layout_width="match_parent" android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="版本"
+            android:background="#e4dbd5"
+            android:gravity="center_vertical"
+            android:id="@+id/textView13"
+            android:textSize="36dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="1.0 ver"
+            android:gravity="center_vertical|center_horizontal"
+            android:textSize="36dp"
+            android:textColor="#ffffff" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="聯絡方式"
+            android:background="#e4dbd5"
+            android:gravity="center_vertical"
+            android:id="@+id/textView14"
+            android:textSize="36dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="E-mail : WemyJu@gmail.com"
+            android:gravity="center_vertical|center_horizontal"
+            android:textSize="30dp"
+            android:id="@+id/textView16"
+            android:textColor="#ffffff" />
+    </LinearLayout>
 
 </FrameLayout>
