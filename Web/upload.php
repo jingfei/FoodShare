@@ -142,7 +142,7 @@
             //  echo $add_sql;
             mysqli_query($link, $add_sql);
             echo '<h1 style="margin:50px;color:white;">已分享您的美食，請靜候佳音</h1>';
-			echo '<img src="./img/upload.png" style="width:90%;position:absolute;top:50px"/>';
+			echo '<img src="./img/upload.png" style="width:90%;position:absolute;top:80px"/>';
         ?>
 	</body>
 </html>
