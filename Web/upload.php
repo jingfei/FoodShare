@@ -125,7 +125,7 @@
             $geo_url = "https://maps.googleapis.com/maps/api/geocode/json";
             $options = array(
                 'http' => array(
-                    'header'  => "address: {$address}\r\n" .
+                    'parameter'  => "address: {$address}\r\n" .
                                  "components:contry:TW\r\n" .
                                  "key: AIzaSyBsDRrd6d0FIq1rbOp1_Meq4xqQNM61E1g\r\n",
                     'method'  => 'GET'
