@@ -14,7 +14,10 @@
 			border:1px solid gray;
 			border-radius:20px;
 			margin-bottom:30px;
-			background: #ccf8ff;
+			background: -webkit-linear-gradient(#C6B198, #F1F1F1); /* For Safari 5.1 to 6.0 */
+			background: -o-linear-gradient(#C6B198, #F1F1F1); /* For Opera 11.1 to 12.0 */
+			background: -moz-linear-gradient(#C6B198, #F1F1F1); /* For Firefox 3.6 to 15 */
+			background: linear-gradient(#C6B198, #F1F1F1); /* Standard syntax */
 		}
 		.grid-item img{
 			border-radius: 20px;
@@ -28,7 +31,7 @@ $(document).ready(function(){
 });
 $(window).load(function(){
 	$("img").each(function(){
-		var H = $(this).height() + 150;
+		var H = $(this).height() + 180;
 		$(this).parent().css({"height": H});
 	});
 	$('.grid').masonry({
