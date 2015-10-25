@@ -26,6 +26,12 @@ function initMap() {
 	else
 		console.log("nope");
 	var myLatLng = {lat:lat,lng:lng};
+	// Create a map object and specify the DOM element for display.
+	 	var map = new google.maps.Map(document.getElementById('map'), {
+			 				center: myLatLng,
+							 //				scrollwheel: false,
+							  				zoom: 15
+											 	});
 
 	// Create a marker and set its position.
 	var marker, i;
@@ -34,7 +40,6 @@ function initMap() {
 				map: map,
 				position: new google.maps.LatLng(locations[i][0],locations[i][1])
 		});
-				console.log(locations[i][0]+","+locations[i][1]);
 		google.maps.event.addListener(marker, 'click', (function(marker,i){
 			return function(){
 				infowindow.setContent(locations[i][2]);
