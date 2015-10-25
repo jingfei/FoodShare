@@ -8,11 +8,11 @@
 		<link rel="stylesheet" href="./css/search.css" type="text/css"/>
 		<style>
 		.grid{ margin:10px 180px; }
-		.grid-item { 
-			width: 300px; 
-			border:1px solid gray; 
-			border-radius:20px; 
-			margin-bottom:30px; 
+		.grid-item {
+			width: 300px;
+			border:1px solid gray;
+			border-radius:20px;
+			margin-bottom:30px;
 			background: #ccf8ff;
 		}
 		.grid-item img{
@@ -81,9 +81,11 @@ $(window).load(function(){
 				$keyword = $_POST["q"];
 				require_once "openDB.php";
 				$query = "SELECT pID, topic, content, address FROM posts";
-			    if ($keyword)
-			        $query .= " WHERE ";	//TODO:
-
+			    if ($keyword) {
+			        $query .= " WHERE topic LIKE '%" . $keyword . "%' OR content LIKE '%" . $keyword .
+								"%' OR address LIKE '%" . $keyword . "%'";
+					echo $query;
+				}
 			    $result = mysqli_query($link, $query);
 
 			    for ($i=0; $i<mysqli_num_rows($result); $i++) {
@@ -143,4 +145,3 @@ $(window).load(function(){
 		</div>
 	</body>
 </html>
-
