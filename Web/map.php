@@ -4,6 +4,7 @@
 		<title>Feed Me - map</title>
 		<meta charset="UTF-8" />
 		<link rel="stylesheet" href="./css/home.css" type="text/css"/>
+		<script src="./js/main.js"></script>
 		<style type="text/css">
 			html, body { height: 100%; margin: 0; padding: 0; }
 			#map { height: 100%; }

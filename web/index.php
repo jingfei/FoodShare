@@ -5,6 +5,7 @@
 		<meta charset="UTF-8" />
 		<link rel="stylesheet" href="./css/home.css" type="text/css"/>
 		<script src="./js/jquery-1.11.3.min.js"></script>
+		<script src="./js/main.js"></script>
 		<style>
 #share:hover,#find:hover{cursor:pointer;}
 #ind_share:hover,#ind_find:hover{color:black;background:white;cursor:pointer;}

@@ -5,6 +5,7 @@
 		<meta charset="UTF-8" />
 		<script src="./js/jquery-1.11.3.min.js"></script>
 		<script src="./js/masonry.pkgd.min.js"></script>
+		<script src="./js/main.js"></script>
 		<link rel="stylesheet" href="./css/search.css" type="text/css"/>
 		<style>
 		.grid{ margin:10px 180px; }
