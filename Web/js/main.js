@@ -1,5 +1,5 @@
 $(document).ready( function() {
-	if($(window).width()<1200){
+	if($(window).width()<1600){
 		$('#navigation').hide();
 	}
 });
