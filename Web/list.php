@@ -62,7 +62,15 @@ $(window).load(function(){
 							<a id="buttonG" href="comment.php">我要評價</a>
 						</li>
 						<li>
-							<a id="buttonQ" href="login.php">登入</a>
+							<a id="buttonQ" href="login.php">
+								<?php
+									session_start();
+									if (isset($_SESSION["username"]))
+										echo "登出";
+									else
+										echo "登入";
+								?>
+							</a>
 						</li>
 					</ul>
 				</div>
@@ -85,6 +93,7 @@ $(window).load(function(){
 	</form>
 		<div class="grid">
 			<?php
+				session_start();
 				$keyword = $_POST["q"];
 				require_once "openDB.php";
 				$query = "SELECT pID, topic, content, address FROM posts";

@@ -39,24 +39,55 @@
 			<img style="width:100px;position:fixed;left:20px;bottom:50px;" src="./img/rice.png" />
 			<img style="width:100px;position:fixed;right:20px;top:200px;" src="./img/fish.png" />
 		</div>
-		<form id="applyForm" class="ui large form error segment" method="post" action="./upload.php" style="background-color:rgba(255,255,255,0.8); width:40%; margin:50px auto">
-			<font color=red> * 必要填寫欄位</font><br>
-			<h4 class="ui dividing header">登入</h4>
-			<div class="required field eight wide">
-				<label for="topic">帳號</label>
-				<input type="text" required id="topic" name="topic" class="required" size="10" maxlength="10" />
-				<br>
-			</div>
 
-				<div class="required field eight wide">
-					<label for="year">密碼</label>
-					<input type="password" required id="year" name="year" class="required" maxlength="50" size="15" />
-					<br>
-				</div>
+		<?php
+			session_start();
+			$account = $_POST["account"];
+			$password = $_POST["passwd"];
+			if ($account != "" && $password != "") {
+				require_once "openDB.php";
+				$query = "SELECT name, password FROM users WHERE name='{$account}'";
+				$result = mysqli_query($link, $query);
+				$row = mysqli_fetch_assoc($result);
+				if ($account == $row["name"] && md5($password) == $row["password"]) {
+					$_SESSION['username'] = $account;
+					echo '<h1 style="margin:50px;color:white;">您已經成功的登入囉~</h1>';
+				}
+			}
+			else if ($_SESSION['username'] != "") {
+				echo '<form id="applyForm" class="ui large form error segment" method="post" action="login.php" style="background-color:rgba(255,255,255,0.8); width:40%; margin:50px auto">
+					<font color=red> * 必要填寫欄位</font><br>
+					<h3 class="ui dividing header">您確定要登出嗎?</h3>
 
-			<div class="field">
-				<button class="ui blue submit button" type="submit">登入</button>
-			</div>
-		</form>
+					<div class="field">
+						<button class="ui blue submit button" type="submit">登出</button>
+					</div>
+				</form>';
+			}
+			else {
+				echo '<form id="applyForm" class="ui large form error segment" method="post" action="login.php" style="background-color:rgba(255,255,255,0.8); width:40%; margin:50px auto">
+					<font color=red> * 必要填寫欄位</font><br>
+					<h4 class="ui dividing header">登入</h4>
+					<div class="required field eight wide">
+						<label for="topic">帳號</label>
+						<input type="text" required id="topic" name="account" class="required" size="10" maxlength="10" />
+						<br>
+					</div>
+
+						<div class="required field eight wide">
+							<label for="year">密碼</label>
+							<input type="password" required id="year" name="passwd" class="required" maxlength="50" size="15" />
+							<br>
+						</div>
+
+					<div class="field">
+						<button class="ui blue submit button" type="submit">登入</button>
+					</div>
+				</form>';
+			}
+		?>
+
+
+
 	</body>
 </html>
