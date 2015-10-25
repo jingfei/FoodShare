@@ -4,6 +4,7 @@
 		<title>Feed Me - map</title>
 		<meta charset="UTF-8" />
 		<link rel="stylesheet" href="./css/home.css" type="text/css"/>
+		<script src="./js/jquery-1.11.3.min.js"></script>
 		<script src="./js/main.js"></script>
 		<style type="text/css">
 			html, body { height: 100%; margin: 0; padding: 0; }
@@ -14,7 +15,7 @@ var lat=24.786811000000004,lng=120.99716149999999;
 var locations=[
 <?php
 //	foreach(/*id*/ as $v){
-//		echo "[".$v['adress'].",".$v['content']."],";
+//		echo "[".$v['lng'].",".$v['lat'].",".$v['content']."],";
 //	}
 ?>
 ];
