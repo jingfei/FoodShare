@@ -136,30 +136,6 @@ $(window).load(function(){
 					address<br/>
 				</p>
 			</div>
-			<div class="grid-item">
-				<img src="./img/food1.jpeg" style="width:100%"/>
-				<p>
-					Food1<br/>
-					Good<br/>
-					address<br/>
-				</p>
-			</div>
-			<div class="grid-item">
-				<img src="./img/food2.jpeg" style="width:100%"/>
-				<p>
-					Food1<br/>
-					Good<br/>
-					address<br/>
-				</p>
-			</div>
-		    <div class="grid-item">
-				<img src="./img/food3.jpeg" style="width:100%"/>
-				<p>
-					Food1<br/>
-					Good<br/>
-					address<br/>
-				</p>
-			</div>
 		</div>
 	</body>
 </html>
